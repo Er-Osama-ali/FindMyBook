@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 const BookRecommendations = () => {
@@ -81,27 +82,27 @@ const BookRecommendations = () => {
   ];
 
   return (
-    <div className="p-2"> 
+    <div className="p-2">
       <h2 className="text-xl font-bold mb-4 pl-4">RECOMM<span className='text-blue-400'>ENDED</span></h2>
       <div className="flex flex-wrap justify-between">
         {books.map((book, index) => (
-          <div key={index} className="w-1/5 p-2"> 
-            <div className="relative border rounded-lg p-2 bg-white shadow-lg hover:shadow-xl transform transition-transform duration-300 hover:scale-105"> {/* Added scale and shadow on hover */}
+          <div 
+            key={index} 
+            className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 p-2">
             
+            <div className="relative border rounded-lg p-2 bg-white shadow-lg hover:shadow-xl transform transition-transform duration-300 hover:scale-105">
+
               <div className="absolute top-2 left-2 bg-blue-400 text-white text-xs px-2 py-1 rounded-full">New</div>
 
-              
+            
               <img 
                 src={book.src} 
                 alt={book.name} 
-                className="w-full h-60 object-cover rounded-lg mb-2" 
+                className="w-full h-48 object-cover rounded-lg mb-2" 
               />
 
-            
-              <h3 className="text-sm font-semibold ">{book.name}</h3>
-
-            
-              <p className="text-xs text-left text-gray-700 font-bold mt-1">${book.price}</p>
+              <h3 className="text-sm font-semibold">{book.name}</h3>
+              <p className="text-xs text-left text-gray-700 font-bold mt-1">{book.price}</p>
             </div>
           </div>
         ))}
@@ -110,4 +111,6 @@ const BookRecommendations = () => {
   );
 };
 
-export default BookRecommendations; 
+export default BookRecommendations;
+
+

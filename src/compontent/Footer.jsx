@@ -36,7 +36,7 @@ const paymentImages = [
 
 const Footer = () => {
   return (
-    <div className="text-black bg-white">
+    <div className="text-black bg-white ">
       <div className="container">
         <div data-aos="zoom-in" className="grid md:grid-cols-3 pb-44 pt-5">
          
@@ -49,13 +49,13 @@ const Footer = () => {
             </p>
           </div>
 
-
           <div className="grid grid-cols-2 sm:grid-cols-3 col-span-2 md:pl-10">
             <div>
               <div className="py-8 px-4">
-                <h1 className="sm:text-xl text-xl font-bold sm:text-left text-justify text-blue-400 mb-3">
+                {/* Modified h4 for Customers Services */}
+                <h4 className="text-base sm:text-lg font-bold mb-3 text-blue-400 whitespace-nowrap">
                   Customers Services
-                </h1>
+                </h4>
                 <ul className="flex flex-col gap-3">
                   {FooterLinks.map((link) => (
                     <li
@@ -69,10 +69,12 @@ const Footer = () => {
               </div>
             </div>
 
-        
             <div>
               <div className="py-8 px-4">
-                <h4 className="text-xl mb-3 text-blue-400 font-bold">Payment Methods</h4>
+                {/* Modified h4 for Payment Methods */}
+                <h4 className="text-base sm:text-lg font-bold mb-3 text-blue-400 whitespace-nowrap">
+                  Payment Methods
+                </h4>
                 <div className="grid grid-cols-3 gap-3">
                   {paymentImages.slice(0, 3).map((src, index) => (
                     <img key={index} src={src} alt={`payment-method-${index}`} className="w-16 h-16 object-contain" />
@@ -86,8 +88,7 @@ const Footer = () => {
               </div>
             </div>
 
-           
-            <div>
+            <div className="ml-5">
               <div className="flex items-center gap-3 mt-6">
                 <a href="#">
                   <FaInstagram className="text-3xl" />
@@ -118,3 +119,4 @@ const Footer = () => {
 };
 
 export default Footer;
+
